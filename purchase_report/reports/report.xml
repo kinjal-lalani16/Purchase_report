@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <report id="purchase_line_report"
+            string="Remain Quantity Report"
+            model="purchase.wizard"
+            report_type="qweb-pdf"
+            file="purchase_report.report_purchase"
+            name="purchase_report.report_purchase"
+        />
+    </data>
+</odoo>

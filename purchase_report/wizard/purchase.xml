@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_purchase_wizard" model="ir.ui.view">
+       <field name="name">purchase.wizard</field>
+       <field name="model">purchase.wizard</field>
+       <field name="type">form</field>
+       <field name="arch" type="xml">
+           <form>
+                <footer>
+                       <button name="action_done" string="Print" type="object" class="oe_highlight"/>
+                       <button string="Cancel" class="btn btn-default" special="cancel"/>
+                   </footer>
+           </form>
+        </field>
+    </record>
+    <record id="action_remain_quantity_report_all" model="ir.actions.act_window">
+            <field name="name">purchase Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">purchase.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    <menuitem id="menu_purchase_report" name="Remain quantity"  action="action_remain_quantity_report_all" parent="purchase.purchase_report"  groups="purchase.group_purchase_manager"/>
+</odoo>

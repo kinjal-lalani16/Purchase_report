@@ -1,0 +1,55 @@
+<odoo>
+    <template id="purchase_report_doc">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <div class="row">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left">
+                                        <strong>Purchase Order</strong>
+                                    </th>
+                                    <th style="text-align:left">
+                                        <strong>Order Date</strong>
+                                    </th>
+                                    <th style="text-align:left">
+                                        <strong>product Name</strong>
+                                    </th>
+                                    <th style="text-align:left">
+                                        <strong>Remaining Quantity</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="sale_tbody">
+                                <t t-foreach="values" t-as="o">
+
+                                    <tr t-att-class="'bg-200 font-weight-bold o_line_section'">
+                                        <td class="text-left">
+                                            <span t-esc="o['name']"/>
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="o['date_order']" widget="date"/>
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="o['product_id']"/>
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="o['remain_qty']"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+    <template id="report_purchase">
+         <t t-call="web.html_container">
+                <t t-call="purchase_report.purchase_report_doc"/>
+            </t>
+    </template>
+</odoo>
