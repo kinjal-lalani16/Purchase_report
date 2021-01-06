@@ -12,6 +12,9 @@
                                         <strong>Purchase Order</strong>
                                     </th>
                                     <th style="text-align:left">
+                                        <strong>Shipping id</strong>
+                                    </th>
+                                    <th style="text-align:left">
                                         <strong>Order Date</strong>
                                     </th>
                                     <th style="text-align:left">
@@ -28,6 +31,9 @@
                                     <tr t-att-class="'bg-200 font-weight-bold o_line_section'">
                                         <td class="text-left">
                                             <span t-esc="o['name']"/>
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-esc="o['delivery_id']"/>
                                         </td>
                                         <td class="text-left">
                                             <span t-esc="o['date_order']" widget="date"/>

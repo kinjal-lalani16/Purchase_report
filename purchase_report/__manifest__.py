@@ -9,7 +9,7 @@
     'website': "http://www.aktivsoftware.com",
     'category': 'Uncategorized',
     'version': '13.0.1.0.0',
-    'depends': ['purchase'],
+    'depends': ['purchase','stock'],
     'data': [
         # 'security/ir.model.access.csv'
         'wizard/purchase.xml',
