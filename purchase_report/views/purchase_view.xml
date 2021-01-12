@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_wizard_form_view" model="ir.ui.view">
+        <field name="name">Product.wizard.form.view</field>
+        <field name="model">product.Wizard</field>
+        <field name="arch" type="xml">
+            <field name="partner_id"/>
+        </field>
+    </record>
+    <record id="action_create_po" model="ir.actions.act_window">
+        <field name="name">Purchase order</field>
+        <field name="res_model">product.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[]</field>
+        <field name="view_id" ref="product.product_wizard_form_view"/>
+        <field name="binding_model_id" ref="product.model_product_wizard"/>
+        <!-- <field name="target">new</field> -->
+    </record>
+
+</odoo>
